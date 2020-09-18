@@ -1,0 +1,93 @@
+
+
+body, html {
+    height: 100vh;
+    width:100vw;
+    font-family: 'skullsandcrossbones';
+}
+
+html {
+    overflow:hidden;
+    background-color: #2e2e2e;;
+
+}
+
+body{
+    padding:0px;
+    margin:0px;
+
+}
+
+.background {
+    transform: scale(1.6);
+    background-image: url("background.jpg");
+    background-size: cover;
+    background-position: bottom;
+    width:100vw;
+    height:100vh;
+    position: absolute;
+    z-index: -1000;
+}
+
+.patch {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+    height: 100%;
+    transition: all 0.1;
+    cursor: move;
+
+}
+
+.hole {
+    width: 35vh;
+    height: 35vh;
+    box-shadow: 0 0 0 99999px rgba(0, 0, 0, .94);
+    border-radius: 50%;
+    transition: transform 1s;
+}
+
+.patch.left .hole{
+    transform: translateX(-20vh);
+}
+
+.patch.right .hole{
+    transform: translateX(20vh);
+}
+
+span#msg{
+    display: block;
+    position: absolute;
+    top:100%;
+    color:white;
+    text-align-last: center;
+    width:100%;
+}
+
+.menu{
+    top:0;left:0;
+    position: absolute;
+    z-index: 100;
+    width:100vw;
+    height: 100vh;
+    display: flex;
+    background-color: rgba(120, 120, 120, 0.8);
+    justify-content: center;
+    align-items: center;
+}
+
+.menu article {
+    background-color:#EBD5B3;
+    padding:40PX 20px;
+    min-width: 30vw;
+    text-align: center;
+}
+
+.menu button {
+    border:2px solid darkred;
+    border-radius: 20px;
+    cursor: pointer;
+    padding:10px 20px;
+}
+
